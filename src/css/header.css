@@ -17,5 +17,24 @@
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #747bff;
+}
+
+.logo {
+  
+}
+
+.logo-img {
+  width: 16px;
+height: 16px;
+flex-shrink: 0;
+  
+}
+.logo-text {
+  color: var(--third-dark-color);
+  font-family: var(--icon-font);
+  font-size: 18px;
+font-weight: 900;
+line-height: 1.1;
+letter-spacing: 0.02em;
+  
 }

@@ -4,22 +4,57 @@
   | default @import url()
   |============================
 */
+
 @import url('./reset.css');
-@import url('./vite-promo.css');
 @import url('./header.css');
+@import url('./hero.css');
+@import url('./filters.css');
+@import url('./carts.css');
+@import url('./popular.css');
+@import url('./discount.css');
+@import url('./footer.css');
+@import url('./basket.css');
+@import url('./modal.css');
+
+@font-face {
+  font-family: NeueMontreal;
+  src: url('../fonts/NeueMontreal-Regular.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: NeueMontreal;
+  src: url('../fonts/NeueMontreal-Medium.otf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Fontspring-DEMO-quincycf;
+  src: url('../fonts/Fontspring-DEMO-quincycf-black.otf');
+}
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  --main-font: NeueMontreal;
+  --icon-font: Fontspring-DEMO-quincycf;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  --primary-dark-color: #6d8434;
+  --secondary-dark-color: #586f1f;
+  --third-dark-color: #010101;
+  --backgrownd-color: #e8e8e2;
+  --icon-color: #fdc152;
+  --light-color: #fafafa;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  --transition-cub: cubic-bezier(0.4, 0, 0.2, 1);
+}
+body {
+  font-family: var(--main-font);
+  color: var(--third-dark-color);
+  background-color: var(--backgrownd-color);
+}
+
+.container {
+  min-width: 320px;
+  max-width: 375px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
