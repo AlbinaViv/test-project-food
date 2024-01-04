@@ -1,9 +1,5 @@
-.logo {
-  
-}
-
 .footer-container {
-    background: var(--primary-dark-color);
+  background: var(--primary-dark-color);
 }
 .footer-logo {
   display: flex;
@@ -14,36 +10,33 @@
 }
 
 .logo-img-footer {
-    border-radius: 30px;
+  border-radius: 30px;
   width: 28px;
-height: 28px;
-flex-shrink: 0;
-  
+  height: 28px;
+  flex-shrink: 0;
 }
 .logo-text-footer {
   color: var(--backgrownd-color);
   font-family: var(--icon-font);
   font-size: 18px;
-font-weight: 900;
-line-height: 1.1;
-letter-spacing: 0.02em;
-  
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
 }
 
 .social-icon-footer {
   display: flex;
   gap: 12px;
   padding-left: 20px;
-
 }
 
 .icon-footer {
-display: flex;
-padding: 8px;
-width: 40px;
-height: 40px;
-align-items: center;
-gap: 8px;
-border-radius: 10px;
-border: 1px solid rgba(232, 232, 226, 0.30); 
+  display: flex;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(232, 232, 226, 0.3);
 }

@@ -1,42 +1,35 @@
-.logo {
-  
-}
 .hero-container {
-    padding-top: 52px;
-  
+  padding-top: 52px;
 }
 .hero-text-all {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .hero-title {
-text-align: center;
-font-size: 44px;
-font-style: normal;
-font-weight: 500;
-line-height: 1.1;
-letter-spacing: -0.88px;
+  text-align: center;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.88px;
 }
 
 .hero-span {
-    color: #6D8434;
-font-size: 44px;
-font-style: normal;
-font-weight: 500;
-line-height: 48px;
-letter-spacing: -0.88px;
+  color: #6d8434;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: -0.88px;
 }
 
 .hero-image-pic {
-    width: 100%;
-    border-radius: 30px;
-  
+  width: 100%;
+  border-radius: 30px;
 }
 
 .hero-image {
-    border-radius: 30px;
-   
+  border-radius: 30px;
 }
