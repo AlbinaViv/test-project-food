@@ -14,12 +14,13 @@
     />
     
     <script type="module" crossorigin src="/test-project-food/commonHelpers2.js"></script>
-    <link rel="modulepreload" crossorigin href="/test-project-food/assets/vendor-0e3e9dc0.js">
-    <link rel="stylesheet" href="/test-project-food/assets/index-f95b952a.css">
+    <link rel="modulepreload" crossorigin href="/test-project-food/assets/vendor-58ca5e57.js">
+    <link rel="stylesheet" href="/test-project-food/assets/index-291a52fe.css">
   </head>
   <body>
      <header class="header">
-  <div class="logo">
+  <div class="section header-conteiner">
+  <div class="logo-cont">
     <a class="logo-link link" href="../index.html">
     <svg class="logo-img">
       <use href="../img/sprite.svg#icon-white-logo"></use>
@@ -27,22 +28,47 @@
     <span class="logo-text">Food Boutique</span>
   </a>
   </div>
-
   <nav class="nav">
-    <ul class="nav-list">
+    <ul class="nav-list list">
       <li class="nav-item">
-        <a href="/" class="nav-link">Home</a>
+        <a href="/" class="nav-link nav-home">Home</a>
       </li>
       <li class="nav-item">
-        <a href="../basket.html" class="nav-link">Page 2</a>
+        <a href="../basket.html" class="nav-link nav-basket">
+          <svg class="icon-basket-header">
+      <use href="../img/sprite.svg#icon-white-basket"></use>
+    </svg>
+  <span class="header-cart-text">CART (<span class="itemsCount">0</span>)</span> 
+            </a>
       </li>
     </ul>
   </nav>
+  </div>
+  <script type="module" src="/test-project-food/"></script>
 </header>
 
     <main>
     <section>
-    <h1>Hero</h1>
+    <div>
+        <h1>Welcome to the<span>Food</span>Boutique!</h1>
+        <p>With Food Boutique, you're not just subscribing to food, you're signing up for a fresher, fitter, and happier you.</p>
+        <div class="hero-photo-svg">
+            <picture class="hero-image-pic">
+            <source media="(max-width: 767px)"
+            srcset="/test-project-food/assets/bgimg_mob@x1-c2e54436.png 1x, /test-project-food/assets/bgimg_mob@x2-d7cfdc5a.png 2x" />
+            <source media="(max-width: 1439px)"
+            srcset="/test-project-food/assets/bgimg_tab@x1-a57a254f.png 1x, /test-project-food/assets/bgimg_tab@x2-a1cdfd17.png 2x" />
+            <source media="(min-width: 1440px)"
+            srcset="/test-project-food/assets/bgimg_pc@x1-cad2e65a.png 1x, /test-project-food/assets/bgimg_pc@x1-cad2e65a.png 2x" />
+            <img class="hero-image" 
+            src="/test-project-food/assets/bgimg_pc@x1-cad2e65a.png" alt="Organic Food" />
+          </picture>
+            <svg class="hero-svg">
+                <use href="../img/sprite.svg#icon-organic-food">
+                </use>
+            </svg>
+        </div>
+    </div>
 </section>
     </main>
     <footer>
