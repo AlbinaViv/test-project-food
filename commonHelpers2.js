@@ -1,17 +1,17 @@
-import{a as f}from"./assets/vendor-58ca5e57.js";(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))s(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const i of t.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&s(i)}).observe(document,{childList:!0,subtree:!0});function r(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerpolicy&&(t.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?t.credentials="include":e.crossorigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function s(e){if(e.ep)return;e.ep=!0;const t=r(e);fetch(e.href,t)}})();console.log("header");console.log("basket");const p=f.create({baseURL:"https://food-boutique.b.goit.study/api/"});async function c(n){try{const{data:o}=await p(n);return o}catch(o){console.log(o)}finally{}}function g(){return c("/products")}function m(){return c("/products/popular")}m().then(console.log);function y(){return c("/products/discount")}y().then(console.log);async function h(){return(await c("/products/categories")).map(r=>r.split("_").join(" "))}h().then(console.log);async function l(n){const{results:o}=await g(),r=o.map(({img:e,name:t,category:i,popularity:u,price:a,size:d,_id:v,is10PercentOff:L})=>`<li>
-     <a href=""><img src="${e}" alt="${t}">
-         <div class="description">
-             <h3>${t}</h3>
+import{a as p}from"./assets/vendor-58ca5e57.js";(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))r(t);new MutationObserver(t=>{for(const e of t)if(e.type==="childList")for(const c of e.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&r(c)}).observe(document,{childList:!0,subtree:!0});function n(t){const e={};return t.integrity&&(e.integrity=t.integrity),t.referrerpolicy&&(e.referrerPolicy=t.referrerpolicy),t.crossorigin==="use-credentials"?e.credentials="include":t.crossorigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function r(t){if(t.ep)return;t.ep=!0;const e=n(t);fetch(t.href,e)}})();console.log("header");console.log("basket");const f=p.create({baseURL:"https://food-boutique.b.goit.study/api/"});async function i(s){try{const{data:o}=await f(s);return o}catch(o){console.log(o)}finally{}}function g(){return i("/products")}function m(){return i("/products/popular")}m().then(console.log);function y(){return i("/products/discount")}y().then(console.log);async function h(){return(await i("/products/categories")).map(n=>n.split("_").join(" "))}h().then(console.log);async function l(s){const{results:o}=await g(),n=o.map(({img:t,name:e,category:c,popularity:a,price:u,size:d,_id:L,is10PercentOff:P})=>`<li class="cards-products-list">
+     <a href=""><div class="wrap-img"><img class="cards-img" src="${t}" alt="${e}"></div>
+     <div class="description">
+             <h3 class="descr-title">${e}</h3>
              <ul>
-                 <li><span>${i}</span></li>
-                 <li><span>${d}</span></li>
-                 <li><span>${u}</span></li>
+                 <li class="cards-text"><span>${c}</span></li>
+                 <li class="cards-text"><span>${d}</span></li>
+                 <li class="cards-text"><span>${a}</span></li>
              </ul>
          </div>
          <div class="price">
-             <p>${a}</p>
+             <p>${u}</p>
              <button type="button"></button>
          </div>
      </a>
- </li>`).join(""),s=document.createElement("ul");return s.innerHTML=r,s}l().then(console.log);const b=document.querySelector(".cards-paggination");async function P(){const n=await l();b.insertAdjacentElement("beforeend",n)}P();
+ </li>`).join(""),r=document.createElement("ul");return r.innerHTML=n,r.classList="list cards-list",r}l().then(console.log);const b=document.querySelector(".cards-paggination");async function v(){const s=await l();b.insertAdjacentElement("beforeend",s)}v();
 //# sourceMappingURL=commonHelpers2.js.map
