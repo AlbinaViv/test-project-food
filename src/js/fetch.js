@@ -16,7 +16,7 @@ async function fetchProducts(url) {
         // removeLoader();
     }
  }
-function getAllProducts() {
+export function getAllProducts() {
     const url = "/products";
     return fetchProducts(url);
     
