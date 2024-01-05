@@ -49,6 +49,7 @@ body {
   font-family: var(--main-font);
   color: var(--third-dark-color);
   background-color: var(--backgrownd-color);
+  font-style: normal;
 }
 
 .container {
@@ -56,4 +57,8 @@ body {
   max-width: 375px;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+.visually-hidden {
+  display: none;
 }

@@ -6,20 +6,25 @@ export async function mainCardsMarkup(arr) {
      <a href=""><div class="wrap-img"><img class="cards-img" src="${img}" alt="${name}"></div>
      <div class="description">
              <h3 class="descr-title">${name}</h3>
-             <ul>
-                 <li class="cards-text"><span>${category}</span></li>
-                 <li class="cards-text"><span>${size}</span></li>
-                 <li class="cards-text"><span>${popularity}</span></li>
+             <ul class="list discription-list">
+                 <li class="cards-text"><p class="inform-products">Category:</p><span class="inform-products-dom">${category}</span></li>
+                 <li class="cards-text"><p class="inform-products">Size:</p><span class="inform-products-dom">${size}</span></li>
+                 <li class="cards-text"><p class="inform-products">Popularity:</p><span class="inform-products-dom">${popularity}</span></li>
              </ul>
          </div>
-         <div class="price">
-             <p>${price}</p>
-             <button type="button"></button>
+         <div class="price-btn">
+             <p class="price">$${price}</p>
+             <button class="btn-white-basket" type="button">
+             <svg class="icon-basket-white" width="18" height="18">
+             <use href="../img/sprite.svg#icon-white-basket"></use>
+    </svg>
+             </button>
          </div>
      </a>
  </li>`
     
-    ).join('')
+     ).join('')
+    
 
     const ul =document.createElement('ul');
     ul.innerHTML = markup;

@@ -25,6 +25,12 @@
   letter-spacing: -0.88px;
 }
 
+.hero-photo-svg {
+  display: flex;
+  position: relative;
+  margin-top: 32px;
+}
+
 .hero-image-pic {
   width: 100%;
   border-radius: 30px;
@@ -32,4 +38,17 @@
 
 .hero-image {
   border-radius: 30px;
+}
+
+.hero-image-pic {
+  border-radius: 30px;
+  width: 100%;
+}
+
+.hero-svg {
+  position: absolute;
+  top: -7px;
+  right: 8px;
+  width: 100px;
+height: 100px
 }
