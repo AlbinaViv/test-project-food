@@ -23,7 +23,7 @@ export async function mainCardsMarkup(arr) {
      </a>
  </li>`
     
-     ).join('')
+     ).join('').split('_').join(' ')
     
 
     const ul =document.createElement('ul');
