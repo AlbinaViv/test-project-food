@@ -17,5 +17,5 @@ import{a as p}from"./assets/vendor-58ca5e57.js";(function(){const e=document.cre
              </button>
          </div>
      </a>
- </li>`).join(""),r=document.createElement("ul");return r.innerHTML=n,r.classList="list cards-list",r}l().then(console.log);const b=document.querySelector(".cards-paggination");async function v(){const o=await l();b.insertAdjacentElement("beforeend",o)}v();
+ </li>`).join("").split("_").join(" "),r=document.createElement("ul");return r.innerHTML=n,r.classList="list cards-list",r}l().then(console.log);const b=document.querySelector(".cards-paggination");async function v(){const o=await l();b.insertAdjacentElement("beforeend",o)}v();
 //# sourceMappingURL=commonHelpers2.js.map
