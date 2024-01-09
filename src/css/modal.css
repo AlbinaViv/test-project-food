@@ -11,4 +11,23 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  min-width: 335px;
+  max-width: 335px;
+  height: 535px;
+  background-color: var(--light-color);
+}
+
+.icon-close {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+}
+
+.close {
+  transition: fill 0.25s var(--transition-cub);
+  position: absolute;
+  top: 13px;
+  right: 9px;
+  border: none;
+  background: transparent;
 }
