@@ -23,12 +23,14 @@ export function getAllProducts() {
 
 // return fetchProducts(url/popular);
 
-function getPopularProducts() {
+export async function getPopularProducts() {
   const url = '/products/popular';
 
-  return fetchProducts(url);
+  const data = await fetchProducts(url);
+  const result = data.sort((a, b) => b.popularity - a.popularity);
+  return result;
 }
-// getPopularProducts().then(console.log)
+getPopularProducts().then(console.log);
 
 export async function getDiscountProducts() {
   const url = '/products/discount';
@@ -58,8 +60,8 @@ async function getCategories() {
 
 // getCategories().then(console.log)
 
-function getProduct(id) {
+export function getProduct(id) {
   const url = `/products/${id}`;
   return fetchProducts(url);
 }
-// getProduct("640c2dd963a319ea671e3860").then(console.log)
+// getProduct('640c2dd963a319ea671e3860').then(console.log);
