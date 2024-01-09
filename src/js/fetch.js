@@ -1,47 +1,43 @@
-import axios from "axios";
-import { addLoader, removeLoader } from "./loader";
+import axios from 'axios';
+import { addLoader, removeLoader } from './loader';
 // axios.defaults.baseURL = "https://food-boutique.b.goit.study/api/"; приклад використання, але другий більш універсальний
 const axiosGet = axios.create({
-    baseURL: "https://food-boutique.b.goit.study/api/",
-})
+  baseURL: 'https://food-boutique.b.goit.study/api/',
+});
 async function fetchProducts(url) {
-    try {
-        // addLoader();
-        const { data } = await axiosGet(url);
-        return data
-        
-    } catch (error) {
-        console.log(error);
-    } finally { 
-        // removeLoader();
-    }
- }
-export function getAllProducts() {
-    const url = "/products";
-    return fetchProducts(url);
-    
+  try {
+    // addLoader();
+    const { data } = await axiosGet(url);
+    return data;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    // removeLoader();
+  }
 }
-// getAllProducts().then(console.log)
+export function getAllProducts() {
+  const url = '/products';
+  return fetchProducts(url);
+}
+// getAllProducts().then(console.log);
 
 // return fetchProducts(url/popular);
 
 function getPopularProducts() {
-    const url = "/products/popular";
+  const url = '/products/popular';
 
-    return fetchProducts(url);
-    
-    
+  return fetchProducts(url);
 }
-getPopularProducts().then(console.log)
+// getPopularProducts().then(console.log)
 
-function getDiscountProducts() {
-    const url = "/products/discount";
+export async function getDiscountProducts() {
+  const url = '/products/discount';
 
-    return fetchProducts(url);
-    
-    
+  const data = await fetchProducts(url);
+  const result = data.sort(() => Math.random() - 0.5).slice(0, 2);
+  return result;
 }
-getDiscountProducts().then(console.log)
+// getDiscountProducts().then(console.log);
 
 // async function getCategories() {
 //     const url = "/products/categories";
@@ -55,16 +51,15 @@ getDiscountProducts().then(console.log)
 // } повний запис, а я використовую короткий ->
 
 async function getCategories() {
-    const url = "/products/categories";
-    const data = await fetchProducts(url);
-    return data.map((category) => category.split('_').join(' '))
-};
-    
-getCategories().then(console.log)
+  const url = '/products/categories';
+  const data = await fetchProducts(url);
+  return data.map(category => category.split('_').join(' '));
+}
 
+// getCategories().then(console.log)
 
 function getProduct(id) {
-    const url = `/products/${id}`;
-    return fetchProducts(url);
+  const url = `/products/${id}`;
+  return fetchProducts(url);
 }
 // getProduct("640c2dd963a319ea671e3860").then(console.log)

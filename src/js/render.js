@@ -1,10 +1,14 @@
-import { mainCardsMarkup } from "./cards";
+import { discountMarkup, mainCardsMarkup } from './cards';
 
-const divEl = document.querySelector('.cards-paggination');
+const cardsPaggin = document.querySelector('.cards-paggination');
+const cardsDiscount = document.querySelector('.discount');
 
 async function render() {
-const markup = await mainCardsMarkup();
-divEl.insertAdjacentElement("beforeend", markup);
+  const mainCardsMarkup = await mainCardsMarkup();
+  cardsPaggin.insertAdjacentElement('beforeend', mainCardsMarkup);
 
+  const discountMarkup = await discountMarkup();
+
+  cardsDiscount.insertAdjacentElement('beforeend', discountMarkup);
 }
 render();
