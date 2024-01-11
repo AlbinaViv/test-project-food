@@ -73,7 +73,7 @@ export async function popularMarkup(arr) {
         popularity,
         size,
         _id,
-      }) => `<li class="cards-products-list">
+      }) => `<li class="cards-popular-list">
     <a href=""
       ><div class="wrap-img">
         <img class="cards-img" src="${img}" alt="${name}" />

@@ -34,7 +34,6 @@
 }
 
 .description {
-  padding-top: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -44,6 +43,7 @@
   font-weight: 500;
   line-height: 20px;
   padding-bottom: 10px;
+  padding-top: 20px;
 }
 
 .discription-list {
